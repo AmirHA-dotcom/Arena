@@ -1,6 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://boml567jsskmg"]
 
 [ext_resource type="PackedScene" uid="uid://dog3n15sgr7tk" path="res://phase0/Models/Map/Hell Arena.glb" id="1_bcb0y"]
+[ext_resource type="PackedScene" uid="uid://cvr27q222wv4y" path="res://character_body_3d.tscn" id="2_u45fm"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_bcb0y"]
 
@@ -12,6 +13,7 @@
 
 [node name="Node3D" type="Node3D"]
 
+<<<<<<< HEAD
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.08741654, 0, -0.9961719, 0, 1, 0, 0.9961719, 0, -0.08741654, -4.432417, 1.5300169, 0.06782389)
 
@@ -26,6 +28,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4119594, 0)
 mesh = SubResource("BoxMesh_bcb0y")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+<<<<<<< HEAD
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.40375352, 0)
 shape = SubResource("BoxShape3D_bcb0y")
 
@@ -39,3 +42,4 @@ transform = Transform3D(9.331209, 0, 0, 0, 9.331209, 0, 0, 0, 9.331209, -0.92251
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
 transform = Transform3D(15, 0, 0, 0, 0.1, 0, 0, 0, 15, -0.06387091, 0.23459291, -1.5605433)
 shape = SubResource("CylinderShape3D_vbyki")
+
