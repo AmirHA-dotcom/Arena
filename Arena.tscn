@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://boml567jsskmg"]
+
+[ext_resource type="PackedScene" uid="uid://dog3n15sgr7tk" path="res://phase0/Models/Map/Hell Arena.glb" id="1_bcb0y"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_u45fm"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bcb0y"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u45fm"]
+size = Vector3(1, 1.4174805, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Hell arena" parent="." instance=ExtResource("1_bcb0y")]
+transform = Transform3D(9.331209, 0, 0, 0, 9.331209, 0, 0, 0, 9.331209, -0.9225106, -0.051576614, -1.104479)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.08741654, 0, -0.9961719, 0, 1, 0, 0.9961719, 0, -0.08741654, -4.432417, 1.5300169, 0.06782389)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.7800265, 0.62574655, 0, -0.62574655, 0.7800265, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3787493, 0)
+shape = SubResource("ConcavePolygonShape3D_u45fm")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9728551, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4119594, 0)
+mesh = SubResource("BoxMesh_bcb0y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20874023, 0)
+shape = SubResource("BoxShape3D_u45fm")

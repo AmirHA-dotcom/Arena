@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c2jy3kyql06fp"
+path="res://.godot/imported/cockadoodledoo2.mp3-156aae9c021a8e074af8d2c178937635.mp3str"
+
+[deps]
+
+source_file="res://phase0/Chicken Sounds/cockadoodledoo2.mp3"
+dest_files=["res://.godot/imported/cockadoodledoo2.mp3-156aae9c021a8e074af8d2c178937635.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
