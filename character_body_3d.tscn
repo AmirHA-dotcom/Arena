@@ -1,8 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://cvr27q222wv4y"]
+[gd_scene load_steps=4 format=3 uid="uid://cvr27q222wv4y"]
 
-[ext_resource type="Script" uid="uid://dd82o0hpl017i" path="res://character_body_3d.gd" id="1_iwpo4"]
+[ext_resource type="Script" uid="uid://dd82o0hpl017i" path="res://Scripts/character_body_3d.gd" id="1_iwpo4"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fb3t6"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_iwpo4"]
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_iwpo4")
@@ -13,3 +15,6 @@ script = ExtResource("1_iwpo4")
 shape = SubResource("CapsuleShape3D_fb3t6")
 
 [node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_iwpo4")
